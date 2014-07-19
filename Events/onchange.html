@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>onchange</title>
+
+  <style type="text/css">
+    td {vertical-align: top}
+  </style>
+
+  <script type="text/javascript">
+
+    var out;
+    
+    function changed(elem) {
+
+      if (typeof(out) == "undefined") out = document.getElementById('out');
+
+      out.innerHTML += "Form element with name <b>"+ elem.name + "</b> has changed its value to <code>" + elem.value + "</code><br>";
+
+    }
+  </script>
+</head>
+<body>
+
+<table summary="n/a" border="1">
+  <tr><td>
+
+  <form action="#">
+
+     <br><input type="text" name="text" onchange="changed(this);">
+        
+        <p>
+
+     <textarea rows=5 cols=30 name="textarea" onchange="changed(this);">Enter text into the textarea</textarea>
+      
+        <p>
+
+     <input type="password" name="password" onchange="changed(this);">
+
+        <p>
+
+     <select name="drop_down" onchange="changed(this);">
+                      <option value="opt 1">Option 1</option>
+                      <option value="opt 2">Option 2</option>
+                      <option value="opt 3">Option 3</option>
+                      <option value="opt 4">Option 4</option>
+                    </select>
+     
+        <p>
+
+                   <input type="radio"    name="radio" value="radio one"    onchange="changed(this);">First
+               <br><input type="radio"    name="radio" value="radio two"    onchange="changed(this);">Second
+               <br><input type="radio"    name="radio" value="radio three"  onchange="changed(this);">Third
+
+        <p>
+
+                   <input type="checkbox" name="checkbox" value="checkbox one"    onchange="changed(this);">Foo
+               <br><input type="checkbox" name="checkbox" value="checkbox tow"    onchange="changed(this);">Bar
+               <br><input type="checkbox" name="checkbox" value="checkbox three"  onchange="changed(this);">Baz
+
+        <p>
+
+                   <input type="submit"   value="Go!"    onchange="changed(this);">
+
+     
+
+  </form>
+ </td><td>
+
+   <div id="out"></div>
+
+ </td></tr>
+
+</body>
+</html>
+
