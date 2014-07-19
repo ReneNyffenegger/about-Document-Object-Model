@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>createElement()</title>
+
+<script type="text/JavaScript">
+
+function createElements() {
+  
+  var elem_body = document.getElementsByTagName('body') [0];
+
+  elem_div = document.createElement('div');
+
+  elem_div.innerHTML = "Created.";
+
+  elem_div.style.backgroundColor = '#ff0000'; // https://github.com/ReneNyffenegger/about-css/blob/master/javascript/change_style.html
+
+  elem_body.appendChild(elem_div);
+}
+
+</script>
+</head>
+<body onload='createElements()'>
+
+
+</body>
+</html>
