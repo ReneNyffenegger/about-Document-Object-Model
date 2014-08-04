@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>DOM Implementation - has Feature</title>
+
+  <script type="text/javascript">
+
+    function main() {
+
+      var table = document.createElement('table');
+
+      ['XML', 'HTML', 'Core', 'XML', 'Views', 'StyleSheets', 'CSS', 'CSS2',
+       'Events', 'UIEvents', 'MutationEvents', 'HTMLEvents', 'Range', 'Traversal'].map(function(feature) {
+
+          var tr = document.createElement('tr');
+      
+          tr.appendChild( document.createElement('td') );
+          tr.appendChild( document.createElement('td') );
+      
+          tr.cells[0].appendChild( document.createTextNode(feature) )
+          tr.cells[1].appendChild( document.createTextNode(document.implementation.hasFeature(feature, '2.0')) );
+      
+          table.appendChild(tr);
+      });
+      
+      document.getElementsByTagName('body')[0].appendChild(table);
+
+    }
+
+  </script>
+
+</head>
+<body onload="main();">
+
+
+</body>
+</html>
