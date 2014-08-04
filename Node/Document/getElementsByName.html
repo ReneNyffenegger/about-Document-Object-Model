@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>document.getElementsByName</title>
+
+  <style type="text/css">
+    div {height: 20px;
+         border: red 1px solid;
+        }
+  </style>
+
+  <script type="text/javascript">
+    
+     function main() { 
+       try {
+         var node_list = document.getElementsByName('name_one');
+
+
+         for (var i = 0; i<node_list.length; i++) {
+
+           node_list[i].innerHTML = "This node matches the name <b>name_one</b>";
+
+         };
+
+     
+     
+       } catch(e) {alert (e);}
+     }
+
+
+  </script>
+</head>
+
+<body onload='main();'>
+
+  <div name="name_one"></div>
+  <div name="name_two"></div>
+  <div name="name_one"></div>
+  <div name="name_two"></div>
+
+</body>
+</html>
+
