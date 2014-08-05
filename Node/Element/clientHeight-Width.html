@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>style</title>
+
+  <style type="text/css">
+    #t {
+      position: absolute;
+      top: 150px;
+      left: 150px;
+      font-size:4em;
+      font-family: Courier;
+/*    visibility: hidden; */
+      height: auto;
+      width: auto;
+    }
+  </style>
+
+</head>
+
+  <script type="text/javascript">
+    function main() {
+
+       var t   = document.getElementById('t'  );
+       var out = document.getElementById('out');
+
+       out.innerHTML = 'Dimensions of <b>' + t.innerHTML + '</b>:</br>' +
+                       'Width:  ' + t.clientWidth + '<br>' +
+                       'Height: ' + t.clientHeight;
+
+    }
+  </script>
+
+<body onload='main();'>
+
+  <div id='t'>Foo Bar baz</div>
+
+  <div id='out'></div>
+
+</body>
+</html>
+
