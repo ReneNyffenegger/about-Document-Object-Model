@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>stopPropagation()</title>
+
+  <style type="text/css">
+    #A , #B , #C {margin: 20px; border: 1px solid black}
+  </style>
+
+  <script type="text/javascript">
+    function clicked(e, elem) {
+      var out = document.getElementById('out');
+
+      out.innerHTML += 'clicked ' + elem.id + '<br>'
+
+      if (document.getElementById('stop').checked)  {
+        e.stopPropagation();
+      }
+    }
+  </script>
+
+</head>
+<body>
+
+   <div id='A' onclick="clicked(event, this);">
+     <div id='B' onclick="clicked(event, this);">
+        <div id='C' onclick="clicked(event, this);">
+          click me
+        </div>
+     </div>
+   </div>
+
+   <p><input id='stop' type='checkbox'> <code>stopPropagation</code></p>
+
+   <div id='out'>
+   </div>
+
+</body>
+</html>
