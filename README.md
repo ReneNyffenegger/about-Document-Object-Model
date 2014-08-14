@@ -26,3 +26,5 @@ small examples for the Document Object Model (DOM).
 ## Links
 
 [python's minidom](https://github.com/ReneNyffenegger/about-python/tree/master/standard-library/xml/dom/minidom).
+
+[Browser Object Model (BOM)(https://github.com/ReneNyffenegger/Browser-Object-Model).
