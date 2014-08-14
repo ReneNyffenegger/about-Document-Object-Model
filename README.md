@@ -22,3 +22,7 @@ small examples for the Document Object Model (DOM).
     |   +---Text
     |       +---CDATASection
     +---NodeList
+
+## Links
+
+[python's minidom](https://github.com/ReneNyffenegger/about-python/tree/master/standard-library/xml/dom/minidom).
