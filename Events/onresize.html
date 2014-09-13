@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>onchange</title>
+
+  <style type="text/css">
+    td {vertical-align: top}
+  </style>
+
+  <script type="text/javascript">
+    var out_w, out_h;
+
+    function resized() {
+
+      out_w.innerHTML = window.innerWidth;
+      out_h.innerHTML = window.innerHeight;
+
+    }
+    
+    function main(elem) {
+
+      window.onresize = resized;
+    
+      out_w = document.getElementById('w');
+      out_h = document.getElementById('h');
+
+      resized();
+
+    }
+
+  </script>
+</head>
+<body onload='main()'>
+
+  Width: <span id='w'></span><br>
+  Height: <span id='h'></span>
+
+</body>
+</html>
