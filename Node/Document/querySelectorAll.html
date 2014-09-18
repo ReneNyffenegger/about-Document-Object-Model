@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>querySelectorAll</title>
+
+  <script type="text/javascript">
+    
+     function main() { 
+       var node_list = document.querySelectorAll('p.foo, div.bar');
+
+       for (var n=0; n<node_list.length; n++) {
+
+         node_list[n].innerHTML = node_list[n].innerHTML.toUpperCase();
+
+       }
+
+     }
+
+  </script>
+
+</head>
+<body onload='main();'>
+
+  Change text to upper case when element matches either <code>p.foo</code> or <code>div.bar</code>:
+
+  <p class='foo'>p foo one  </p>
+  <p class='bar'>p bar two  </p>
+  <p class='foo'>p foo three</p>
+  <p class='bar'>p bar four </p>
+
+  <div class='foo'>div foo five </div>
+  <div class='bar'>div bar six  </div>
+  <div class='foo'>div foo seven</div>
+  <div class='bar'>div bar eight</div>
+ 
+</body>
+</html>
