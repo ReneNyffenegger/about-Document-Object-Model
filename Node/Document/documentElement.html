@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>document.documentElement</title>
+
+<script type="text/JavaScript">
+
+function main() { try {
+   var root_elem = document.documentElement;
+
+   var table = document.getElementById('table');
+
+   var rows = table.rows;
+
+   for (var r=0; r<rows.length; r++) {
+
+     var cells = rows[r].cells;
+
+     var key  = cells[0].innerHTML;
+     cells[0].innerHTML = key + ':';
+
+
+     cells[1].innerHTML = root_elem[key];
+   }
+
+
+ } catch(e) {alert (e);}
+}
+
+
+</script>
+
+</head>
+<body onload='main();'>
+
+  
+  <code>document.documentElement</code> gets the root element.
+
+  <table id='table'>
+    <tr><td>tagName</td><td></td></tr>
+    <tr><td>nodeName</td><td></td></tr>
+    <tr><td>localName</td><td></td></tr>
+  </table>
+
+
+
+</body>
+</html>
+
