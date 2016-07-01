@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>insertBefore</title>
+
+  <style type="text/css">
+    b {color: red}
+  </style>
+
+</head>
+
+  <script type="text/javascript">
+    function main() {
+
+       var div = document.getElementById('theDiv');
+
+       var created=document.createElement('span');
+       created.innerHTML=' <b>created</b> ';
+       div.insertBefore(created, div.childNodes[4]);
+
+
+    }
+  </script>
+
+<body onload='main();'>
+
+  <div id='theDiv'><span>one</span> two <span>three</span> four <span>five</span> </div>
+
+
+</body>
+</html>
+
