@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>childElementCount</title>
+
+  <style type="text/css">
+
+    #out {
+       margin-top: 20px;
+       background-color: #fffaf0;
+    }
+
+  </style>
+
+</head>
+
+  <script type="text/javascript">
+    function main() {
+
+       var div = document.getElementById('theDiv');
+       var out = document.getElementById('out'   );
+
+       out.innerHTML = 'The DIV contains ' + div.childElementCount + ' children<br>';
+
+    }
+  </script>
+
+<body onload='main();'>
+
+  <div id='theDiv'>
+
+    <div>First Child
+        <div>First child within first child</div>
+        <div>Second child within first child</div>
+    </div>
+
+    some text
+
+    <div>Second Child</div>
+
+    <div>Third Child</div>
+  
+  </div>
+
+  <div id='out'></div>
+
+</body>
+</html>
+
