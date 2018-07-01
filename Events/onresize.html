@@ -2,28 +2,39 @@
 <html>
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>onchange</title>
 
-  <style type="text/css">
-    td {vertical-align: top}
+  <style>
+   body {
+      margin: 0;
+      height: 100vh;
+      background-color: #fff730;
+   }
   </style>
 
   <script type="text/javascript">
-    var out_w, out_h;
+    var out_c, out_w, out_h;
 
     function resized() {
+      out_c.innerHTML ++;
 
-      out_w.innerHTML = window.innerWidth;
-      out_h.innerHTML = window.innerHeight;
+//    out_w.innerHTML = window.innerWidth;
+//    out_h.innerHTML = window.innerHeight;
+      out_w.innerHTML = document.body.clientWidth;
+      out_h.innerHTML = document.body.clientHeight;
 
     }
     
     function main(elem) {
 
       window.onresize = resized;
-    
+
+      out_c = document.getElementById('c');
       out_w = document.getElementById('w');
       out_h = document.getElementById('h');
+
+      out_c.innerHTML = 0;
 
       resized();
 
@@ -33,6 +44,7 @@
 </head>
 <body onload='main()'>
 
+  Counter: <span id='c'></span><br>
   Width: <span id='w'></span><br>
   Height: <span id='h'></span>
 
