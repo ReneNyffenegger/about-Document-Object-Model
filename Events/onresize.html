@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<head 
+  <me a content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>onchange</title>
 
@@ -14,15 +14,15 @@
   </style>
 
   <script type="text/javascript">
-    var out_c, out_w, out_h;
+    var out_cnt, out_clientWidth, out_clientHeight, out_innerWidth, out_innerHeight;
 
     function resized() {
-      out_c.innerHTML ++;
+      out_cnt.innerHTML ++;
 
-//    out_w.innerHTML = window.innerWidth;
-//    out_h.innerHTML = window.innerHeight;
-      out_w.innerHTML = document.body.clientWidth;
-      out_h.innerHTML = document.body.clientHeight;
+      out_clientWidth .innerHTML = document.body.clientWidth;
+      out_clientHeight.innerHTML = document.body.clientHeight;
+      out_innerWidth  .innerHTML = window.innerWidth;
+      out_innerHeight .innerHTML = window.innerHeight;
 
     }
     
@@ -30,11 +30,13 @@
 
       window.onresize = resized;
 
-      out_c = document.getElementById('c');
-      out_w = document.getElementById('w');
-      out_h = document.getElementById('h');
+      out_cnt          = document.getElementById('cnt'         );
+      out_clientWidth  = document.getElementById('clientWidth' );
+      out_clientHeight = document.getElementById('clientHeight');
+      out_innerWidth   = document.getElementById('innerWidth'  );
+      out_innerHeight  = document.getElementById('innerHeight' );
 
-      out_c.innerHTML = 0;
+      out_cnt.innerHTML = 0;
 
       resized();
 
@@ -44,9 +46,13 @@
 </head>
 <body onload='main()'>
 
-  Counter: <span id='c'></span><br>
-  Width: <span id='w'></span><br>
-  Height: <span id='h'></span>
+  <table>
+    <tr><td>Counter:     </td><td><span id='cnt'         ></span></td></tr>
+    <tr><td>clientWidth: </td><td><span id='clientWidth' ></span></td></tr>
+    <tr><td>clientHeight:</td><td><span id='clientHeight'></span></td></tr>
+    <tr><td>innerWidth:  </td><td><span id='innerWidth'  ></span></td></tr>
+    <tr><td>innerHeight: </td><td><span id='innerHeight' ></span></td></tr>
+  </table>
 
 </body>
 </html>
