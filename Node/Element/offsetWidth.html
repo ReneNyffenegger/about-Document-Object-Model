@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>TODO</title>
+
+  <script type="text/javascript">
+
+    function main() {
+
+       var txt = document.getElementById('txt');
+       console.log('txt.offsetWidth  = ' + txt.offsetWidth );
+       console.log('txt.offsetHeight = ' + txt.offsetHeight);
+
+       var stl = window.getComputedStyle(txt);
+       console.log('stl.width        = ' + stl.width );
+       console.log('stl.height       = ' + stl.height);
+
+    }
+
+  </script>
+
+</head>
+<body onload='main()'>
+
+  <span id='txt'>Hello world</span>
+
+</body>
+</html>
+
