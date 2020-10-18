@@ -7,7 +7,7 @@
 <script type="text/JavaScript">
 
 function main() { try {
-   var root_elem = document.documentElement;
+   var rootElement = document.documentElement;
 
    var table = document.getElementById('table');
 
@@ -21,19 +21,17 @@ function main() { try {
      cells[0].innerHTML = key + ':';
 
 
-     cells[1].innerHTML = root_elem[key];
+     cells[1].innerHTML = rootElement[key];
    }
 
 
  } catch(e) {alert (e);}
 }
 
-
 </script>
 
 </head>
 <body onload='main();'>
-
   
   <code>document.documentElement</code> gets the root element.
 
@@ -43,8 +41,5 @@ function main() { try {
     <tr><td>localName</td><td></td></tr>
   </table>
 
-
-
 </body>
 </html>
-
